@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8">
+<html lang="en" class="lock"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ghofrane Chebbah | Digital Marketing Portfolio &amp; Personal Brand</title>
 <meta name="description" content="Explore the portfolio of Ghofrane Chebbah, a Digital Marketing Master's student at ESSECT, showcasing projects in marketing strategy, brand development, AI applications, market research and digital experiences.">
@@ -52,7 +52,7 @@ nav.s{background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:
 .tag{position:absolute;inset-block-end:8%;inset-inline-end:-6%;background:var(--card);padding:8px 16px;border-radius:24px 24px 6px 24px;font:italic 1.15rem var(--serif);box-shadow:0 8px 24px #3a332022;transform:rotate(-4deg)}
 @keyframes morph{50%{border-radius:42% 58% 45% 55%/55% 42% 58% 45%;transform:rotate(6deg)}}
 @keyframes fl{50%{transform:translateY(-12px) rotate(5deg)}}
-@keyframes up{from{opacity:0;transform:translateY(26px)}}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 .hero .wrap>div:first-child>*{animation:up .8s both}.hero .wrap>div:first-child>*:nth-child(2){animation-delay:.1s}.hero .wrap>div:first-child>*:nth-child(3){animation-delay:.2s}.hero .wrap>div:first-child>*:nth-child(n+4){animation-delay:.3s}
 .scroll{position:absolute;inset-block-end:22px;inset-inline-start:50%;font-size:.8rem;font-weight:600;opacity:.7}
 .about{background:var(--soft);border-radius:50% 50% 0 0/80px 80px 0 0}
@@ -150,12 +150,30 @@ section.ct .wrap{z-index:1}
 .ct .avail{background:#ffffffa8;color:#3F3A24}.ct .loc{opacity:.85}
 .ct .btn.alt{color:#3F3A24;box-shadow:inset 0 0 0 2px #3F3A2488}.ct .btn.alt:hover{box-shadow:inset 0 0 0 2px #3F3A24}
 .fbar{background:#34301D;color:#F6EBCF}
+.intro{--ib:#F7D89A;--ig:#DF6D41;position:fixed;inset:0;z-index:100;background:var(--ib);overflow:hidden;padding:0}
+:root[data-theme=dark] .intro{--ib:#2A2517;--ig:#F7D89A}
+.intro svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.intro text{fill:var(--ig);font-family:'DM Sans',system-ui,sans-serif;font-weight:800}.intro circle{fill:var(--ig)}
+.intro .gg{transform-box:fill-box;transform-origin:center;animation:pop 1.4s cubic-bezier(.2,.9,.2,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.55) rotate(-8deg)}}
+.intro .lb{position:absolute;font:600 .72rem/1 ui-monospace,Menlo,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);opacity:.75;z-index:2}
+.intro .l1{inset-block-start:calc(28px + env(safe-area-inset-top,0px));inset-inline-start:28px}
+.intro .l2{inset-block-end:calc(34px + env(safe-area-inset-bottom,0px));inset-inline-end:28px;text-decoration:none;display:flex;gap:10px;align-items:center}
+.intro .l2 i{font-style:normal;display:inline-block;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px)}}
+html.lock{overflow:hidden}.intro #fx{z-index:3;pointer-events:none}.intro #ink{fill:var(--ig)}.intro .l2{cursor:pointer}
+.hero .wrap>div:first-child>*{opacity:0}.go .hero .wrap>div:first-child>*{animation:up .8s both}.go .hero .wrap>div:first-child>*:nth-child(2){animation-delay:.1s}.go .hero .wrap>div:first-child>*:nth-child(3){animation-delay:.2s}.go .hero .wrap>div:first-child>*:nth-child(n+4){animation-delay:.3s}
+@media(prefers-reduced-motion:reduce){.hero .wrap>div:first-child>*{opacity:1}}
 </style></head><body><div class="cur" id="cur" aria-hidden="true"></div>
 <nav id="nav" aria-label="Main"><a class="logo" href="#home">Ghof<b>rane</b></a>
 <div class="links" id="links"><a href="#home" data-k="n1"></a><a href="#about" data-k="n2"></a><a href="#journey" data-k="n3"></a><a href="#skills" data-k="n4"></a><a href="#projects" data-k="n5"></a><a href="#interests" data-k="n6"></a><a href="#contact" data-k="n7"></a>
 <button class="tg" id="tg" aria-label="Toggle light/dark mode">☾</button><div class="lang" role="group" aria-label="Language"><button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="ar">AR</button></div></div>
 <button class="burger" id="bg" aria-label="Menu" aria-expanded="false">☰</button></nav>
 <main>
+<section class="intro" id="intro" aria-label="Introduction"><svg id="isv" viewBox="0 0 1000 600" role="img" aria-label="Ghofrane, G"><defs><filter id="goo" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur in="SourceGraphic" stdDeviation="11"/><feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -13"/></filter></defs>
+<g class="gg"><g filter="url(#goo)"><text id="gt" x="500" y="300" text-anchor="middle" font-size="560" dy=".35em">G</text><circle id="c0" r="0"/><circle id="c1" r="30"/><circle id="c2" r="22"/><circle id="c3" r="16"/></g></g></svg>
+<svg id="fx" aria-hidden="true"><defs><filter id="rough" x="-30%" y="-30%" width="160%" height="160%"><feTurbulence type="fractalNoise" baseFrequency=".007 .011" numOctaves="4" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="190" xChannelSelector="R" yChannelSelector="G"/></filter><mask id="mk" maskUnits="userSpaceOnUse" x="0" y="0"><rect id="mr" x="0" y="0" fill="#fff"/><circle id="hole" r="0" fill="#000" filter="url(#rough)"/></mask></defs><g mask="url(#mk)"><circle id="ink" r="0" filter="url(#rough)"/></g></svg>
+<span class="lb l1" data-k="il"></span><a class="lb l2" href="#home"><span data-k="sd"></span> <i>↓</i></a></section>
 <section class="hero" id="home"><div class="wrap"><div>
 <span class="pill"><i class="dot"></i><span data-k="seek"></span></span><span class="hi"><span data-k="hi"></span></span><h1 data-k="h1"></h1><p data-k="intro"></p><p class="sub" data-k="sub"></p><span class="status" data-k="status"></span>
 <div class="cta"><a class="btn" href="#projects" data-k="c1"></a><a class="btn alt" href="#contact" data-k="c2"></a><a class="btn alt" id="cv" hidden data-k="cv"></a></div></div>
@@ -197,7 +215,7 @@ exploring:{en:["AI-powered marketing tools","Web analytics and GA4","UX/UI and c
 const FIG="https://www.figma.com/design/xGTT2R5nWg6Bt3dmUlNJQy/DS2--Chebbah-Ghofrane?node-id=0-1&p=f",DIA="https://diaspora-learn-connect.lovable.app";
 const T={
 en:{n1:"Home",n2:"About",n3:"Journey",n4:"Skills",n5:"Projects",n6:"Interests",n7:"Contact",hi:"Hello, I'm Ghofrane.",h1:"Curiosity leads. Ideas take shape.",
-intro:"I'm a Digital Marketing Master's student interested in understanding people, exploring ideas and turning opportunities into meaningful digital experiences.",sub:"Somewhere between strategy, creativity and technology, that's where I love exploring.",status:"Master's student in Digital Marketing, ESSECT, Tunisia",c1:"Explore my work",c2:"Let's connect",cv:"Download CV",tag:"Always learning.",scr:"Scroll ↓",
+intro:"I'm a Digital Marketing Master's student interested in understanding people, exploring ideas and turning opportunities into meaningful digital experiences.",sub:"Somewhere between strategy, creativity and technology, that's where I love exploring.",status:"Master's student in Digital Marketing, ESSECT, Tunisia",c1:"Explore my work",c2:"Let's connect",cv:"Download CV",tag:"Always learning.",scr:"Scroll ↓",il:"Ghofrane Chebbah · Digital marketing portfolio",sd:"Scroll down",
 ah:"More than a marketing student.",a1:"I enjoy understanding the why behind things: why people make certain decisions, how ideas become meaningful products, and how technology can improve everyday experiences.",a2:"I gravitate toward exploring, researching and connecting perspectives. I appreciate creativity, and I also like the structure and reasoning behind a good idea.",a3:"I spent a significant part of my teenage years in Saudi Arabia before continuing my education in Tunisia. That path taught me to adapt and to value different perspectives.",
 chips:["Curious mind","Calm energy","Independent spirit","Always learning","Thoughtful perspective","Optimistic outlook"],
 jh:"Every step adds a new perspective.",tl:[["2019–2022","Tunis Business School","Part of my educational path."],["2022–2025","ESSECT","Licence en Sciences de Gestion, Marketing. Mention Très Bien."],["2025–2026","ESSECT","Master's studies in Digital Marketing (ongoing)."]],jn:"Certificates and extra training will be added here as they are completed.",
@@ -213,7 +231,7 @@ bh:"Outside the frameworks and strategies.",bp:"Curiosity, creativity, new persp
 ch:"Have something interesting in mind?",cp:"I'm always open to meaningful conversations, new challenges and opportunities to learn, contribute and grow.",em:"Email me",loc:"Based in Tunisia",fn:"Name",fe:"Email",fs:"Subject",fm:"Message",fb:"Send message",r:"Required",ie:"Enter a valid email",sent:"Your email app is opening with your message.",end:"Until the next interesting idea.",bgw:"ghofrane",eb:"Let's make something meaningful",ch1:"Have something",ch2:"interesting in mind?",seek:"Seeking a 4-month PFE internship · February 2027",cop:"© 2026 Ghofrane Chebbah",top:"Back to top ↑",
 ti:"Ghofrane Chebbah | Digital Marketing Portfolio & Personal Brand",ds:"Explore the portfolio of Ghofrane Chebbah, a Digital Marketing Master's student at ESSECT, showcasing projects in marketing strategy, brand development, AI applications, market research and digital experiences."},
 fr:{n1:"Accueil",n2:"À propos",n3:"Parcours",n4:"Compétences",n5:"Projets",n6:"Intérêts",n7:"Contact",hi:"Bonjour, je suis Ghofrane.",h1:"La curiosité guide. Les idées prennent forme.",
-intro:"Étudiante en Master Marketing Digital, j'aime comprendre les gens, explorer des idées et transformer des opportunités en expériences digitales qui ont du sens.",sub:"Entre stratégie, créativité et technologie, c'est là que j'aime explorer.",status:"Étudiante en Master Marketing Digital, ESSECT, Tunisie",c1:"Découvrir mes projets",c2:"Échangeons",cv:"Télécharger le CV",tag:"Toujours en apprentissage.",scr:"Défiler ↓",
+intro:"Étudiante en Master Marketing Digital, j'aime comprendre les gens, explorer des idées et transformer des opportunités en expériences digitales qui ont du sens.",sub:"Entre stratégie, créativité et technologie, c'est là que j'aime explorer.",status:"Étudiante en Master Marketing Digital, ESSECT, Tunisie",c1:"Découvrir mes projets",c2:"Échangeons",cv:"Télécharger le CV",tag:"Toujours en apprentissage.",scr:"Défiler ↓",il:"Ghofrane Chebbah · Portfolio marketing digital",sd:"Défiler",
 ah:"Plus qu'une étudiante en marketing.",a1:"J'aime comprendre le pourquoi des choses : pourquoi les gens décident, comment une idée devient un produit utile, et comment la technologie améliore le quotidien.",a2:"J'aime explorer, chercher et relier les points de vue. J'apprécie la créativité, mais aussi la structure et la logique d'une bonne idée.",a3:"J'ai passé une grande partie de mon adolescence en Arabie saoudite avant de poursuivre mes études en Tunisie. Ce parcours m'a appris à m'adapter et à apprécier les perspectives différentes.",
 chips:["Esprit curieux","Énergie calme","Esprit indépendant","Toujours en apprentissage","Regard réfléchi","Optimisme"],
 jh:"Chaque étape apporte une nouvelle perspective.",tl:[["2019–2022","Tunis Business School","Une partie de mon parcours."],["2022–2025","ESSECT","Licence en Sciences de Gestion, Marketing. Mention Très Bien."],["2025–2026","ESSECT","Master en Marketing Digital (en cours)."]],jn:"Certificats et formations seront ajoutés ici au fil du temps.",
@@ -229,7 +247,7 @@ bh:"En dehors des cadres et des stratégies.",bp:"La curiosité, la créativité
 ch:"Une idée intéressante en tête ?",cp:"Je suis toujours ouverte aux échanges enrichissants, aux nouveaux défis et aux occasions d'apprendre, de contribuer et de grandir.",em:"M'écrire",loc:"Basée en Tunisie",fn:"Nom",fe:"E-mail",fs:"Objet",fm:"Message",fb:"Envoyer",r:"Champ obligatoire",ie:"Saisissez un e-mail valide",sent:"Votre application e-mail s'ouvre avec votre message.",end:"À la prochaine idée intéressante.",bgw:"ghofrane",eb:"Créons quelque chose de significatif",ch1:"Une idée",ch2:"intéressante en tête ?",seek:"À la recherche d'un stage PFE de 4 mois · février 2027",cop:"© 2026 Ghofrane Chebbah",top:"Retour en haut ↑",
 ti:"Ghofrane Chebbah | Portfolio Marketing Digital & Marque personnelle",ds:"Découvrez le portfolio de Ghofrane Chebbah, étudiante en Master Marketing Digital à l'ESSECT : stratégie marketing, branding, applications de l'IA, études de marché et expériences digitales."},
 ar:{n1:"الرئيسية",n2:"من أنا",n3:"المسار",n4:"المهارات",n5:"المشاريع",n6:"الاهتمامات",n7:"تواصل",hi:"مرحبًا، أنا غفران.",h1:"الفضول يقود، والأفكار تتشكّل.",
-intro:"طالبة ماجستير في التسويق الرقمي، أحب فهم الناس واستكشاف الأفكار وتحويل الفرص إلى تجارب رقمية ذات معنى.",sub:"بين الاستراتيجية والإبداع والتكنولوجيا، هنا أحب أن أستكشف.",status:"طالبة ماجستير في التسويق الرقمي، ESSECT، تونس",c1:"اكتشف أعمالي",c2:"لنتواصل",cv:"تحميل السيرة الذاتية",tag:"أتعلّم دائمًا.",scr:"مرّر ↓",
+intro:"طالبة ماجستير في التسويق الرقمي، أحب فهم الناس واستكشاف الأفكار وتحويل الفرص إلى تجارب رقمية ذات معنى.",sub:"بين الاستراتيجية والإبداع والتكنولوجيا، هنا أحب أن أستكشف.",status:"طالبة ماجستير في التسويق الرقمي، ESSECT، تونس",c1:"اكتشف أعمالي",c2:"لنتواصل",cv:"تحميل السيرة الذاتية",tag:"أتعلّم دائمًا.",scr:"مرّر ↓",il:"غفران الشباح · معرض أعمال التسويق الرقمي",sd:"مرّر للأسفل",
 ah:"أكثر من طالبة تسويق.",a1:"أستمتع بفهم سبب الأشياء: لماذا يتخذ الناس قراراتهم، وكيف تتحول الأفكار إلى منتجات ذات معنى، وكيف تحسّن التكنولوجيا تجاربنا اليومية.",a2:"أميل إلى الاستكشاف والبحث والربط بين وجهات النظر. أقدّر الإبداع، وأحب أيضًا البنية والمنطق وراء الفكرة الجيدة.",a3:"قضيت جزءًا كبيرًا من مراهقتي في المملكة العربية السعودية قبل أن أتابع دراستي في تونس. علّمني هذا المسار التكيّف وتقدير وجهات النظر المختلفة.",
 chips:["عقل فضولي","طاقة هادئة","روح مستقلة","أتعلّم دائمًا","نظرة متأنية","تفاؤل"],
 jh:"كل خطوة تضيف منظورًا جديدًا.",tl:[["2019–2022","Tunis Business School","جزء من مساري الدراسي."],["2022–2025","ESSECT","إجازة في علوم التصرف، تسويق. تقدير: جيد جدًا (Très Bien)."],["2025–2026","ESSECT","دراسات الماجستير في التسويق الرقمي (قيد المتابعة)."]],jn:"ستُضاف الشهادات والدورات الإضافية هنا عند إتمامها.",
@@ -278,10 +296,42 @@ $('#bg').onclick=()=>{const o=$('#links').classList.toggle('o');$('#bg').setAttr
 $('#links').addEventListener('click',e=>{if(e.target.tagName=='A')$('#links').classList.remove('o')});
 addEventListener('scroll',()=>$('#up').classList.toggle('v',scrollY>700),{passive:true});
 addEventListener('scroll',()=>$('#nav').classList.toggle('s',scrollY>30),{passive:true});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll('.links a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')=='#'+e.target.id));const m={home:0,about:1,journey:1,skills:2,projects:3,interests:3,contact:4}[e.target.id];document.querySelectorAll('.rail a').forEach(a=>a.classList.toggle('on',+a.dataset.s===m))}),{rootMargin:'-45% 0px -50% 0px'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll('.links a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')=='#'+(e.target.id=='home'?'intro':e.target.id)));const m={intro:0,home:0,about:1,journey:1,skills:2,projects:3,interests:3,contact:4}[e.target.id];document.querySelectorAll('.rail a').forEach(a=>a.classList.toggle('on',+a.dataset.s===m))}),{rootMargin:'-45% 0px -50% 0px'});
 document.querySelectorAll('section[id]').forEach(s=>io.observe(s));
 if(CONFIG.cv){$('#cv2').hidden=false;$('#cv2').href=CONFIG.cv;$('#cv2').download='Ghofrane_Chebbah_CV.pdf';$('#cv').hidden=false;$('#cv').href=CONFIG.cv;$('#cv').download='Ghofrane_Chebbah_CV.pdf'}
 if(CONFIG.email){$('#em').hidden=false;$('#em').href='mailto:'+CONFIG.email}
 if(CONFIG.linkedin){$('#li').hidden=false;$('#li').href=CONFIG.linkedin}
+
+(function(){const sv=$('#isv'),gt=$('#gt'),c=[0,1,2,3].map(i=>$('#c'+i)),sec=$('#intro');let W=1000,H=600,live=true,mx=null,my=0,px=500,py=300,pr=0;
+function fit(){const p=innerWidth<innerHeight;W=p?600:1000;H=p?800:600;sv.setAttribute('viewBox',`0 0 ${W} ${H}`);const fs=p?Math.min(720,W*1.15):560;gt.setAttribute('x',W/2);gt.setAttribute('y',H/2);gt.setAttribute('font-size',fs);gt.dataset.fs=fs}
+fit();addEventListener('resize',fit);
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){c.forEach(x=>x.setAttribute('r',0));return}
+sec.addEventListener('pointermove',e=>{const r=sv.getBoundingClientRect(),s=Math.min(r.width/W,r.height/H);mx=(e.clientX-r.left-(r.width-W*s)/2)/s;my=(e.clientY-r.top-(r.height-H*s)/2)/s});
+sec.addEventListener('pointerleave',()=>mx=null);
+new IntersectionObserver(es=>live=es[0].isIntersecting).observe(sec);
+(function f(t){requestAnimationFrame(f);if(!live||!sec.isConnected)return;const R=gt.dataset.fs*.36,cx=W/2,cy=H/2;
+const o=[[1.0,.55,.0007,.0009,1,0],[.85,.95,.0010,.0006,2,1],[1.05,.8,.0013,.0011,3,2]];
+o.forEach((q,i)=>{const a=t*q[2]+q[4]*2,b=t*q[3]+q[5]*3;c[i+1].setAttribute('cx',cx+Math.cos(a)*R*q[0]);c[i+1].setAttribute('cy',cy+Math.sin(b)*R*q[1])});
+if(mx!==null){px+=(mx-px)*.14;py+=(my-py)*.14}
+const d=mx===null?999:Math.hypot(px-cx,py-cy),tr=mx===null?0:Math.max(0,Math.min(1,1.25-d/(R*1.7)))*54;pr+=(tr-pr)*.12;
+c[0].setAttribute('cx',px);c[0].setAttribute('cy',py);c[0].setAttribute('r',pr.toFixed(1))})(0)})();
+
+(function(){const ov=$('#intro'),fx=$('#fx'),ink=$('#ink'),hole=$('#hole'),mk=$('#mk'),mr=$('#mr'),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;let on=0;
+const fin=()=>{ov.remove();document.documentElement.classList.remove('lock')};
+if(location.hash&&location.hash!='#home'){fin();document.body.classList.add('go');return}
+function size(){const w=innerWidth,h=innerHeight;fx.setAttribute('viewBox',`0 0 ${w} ${h}`);[mk,mr].forEach(x=>{x.setAttribute('width',w);x.setAttribute('height',h)});[ink,hole].forEach(x=>{x.setAttribute('cx',w/2);x.setAttribute('cy',h/2)})}
+size();addEventListener('resize',size);
+const ez=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+function run(){if(on)return;on=1;document.body.classList.add('go-p');
+if(rm){ov.style.transition='opacity .5s';ov.style.opacity=0;document.body.classList.add('go');setTimeout(fin,520);return}
+const R=Math.hypot(innerWidth,innerHeight)/2+260,t0=performance.now();
+(function a(t){const p=Math.min(1,(t-t0)/1500);ink.setAttribute('r',60+ez(p)*(R-60));if(p<1)return requestAnimationFrame(a);
+$('#isv').style.visibility='hidden';ov.style.background='transparent';ov.querySelectorAll('.lb').forEach(x=>x.style.display='none');
+setTimeout(()=>document.body.classList.add('go'),300);const t1=performance.now();
+(function b(t){const q=Math.min(1,(t-t1)/1300);hole.setAttribute('r',ez(q)*R);if(q<1)return requestAnimationFrame(b);fin()})(t1)})(t0)}
+addEventListener('wheel',e=>{if(e.deltaY>0)run()},{passive:true});
+let y0=0;addEventListener('touchstart',e=>y0=e.touches[0].clientY,{passive:true});addEventListener('touchmove',e=>{if(y0-e.touches[0].clientY>24)run()},{passive:true});
+addEventListener('keydown',e=>{if(['ArrowDown','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();run()}});
+ov.addEventListener('click',e=>{e.preventDefault();run()});})();
 let sv='en';try{sv=localStorage.getItem('gc-lang')||'en'}catch(e){}setLang(T[sv]?sv:'en');
 </script></body></html>
